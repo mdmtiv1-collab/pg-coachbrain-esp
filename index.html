@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoachBrain | Tu Asistente de Entrenador de Baloncesto con IA 24/7</title>
+  <meta name="description" content="Planifica entrenamientos estructurados, obtén respuestas tácticas al instante y accede a una biblioteca de más de 150 ejercicios en video HD en minutos. Conoce a tu asistente de entrenador con IA 24/7.">
+
+  <!-- OG tags -->
+  <meta property="og:title" content="CoachBrain | Tu Asistente de Entrenador de Baloncesto con IA 24/7" />
+  <meta property="og:description" content="Deja de perder horas planificando desde cero. Conoce a tu asistente de entrenador con IA 24/7." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnects: resolve DNS early for all 3rd parties -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.utmify.com.br">
+  <!-- Preload Critical Hero Image (LCP) -->
+  <link rel="preload" as="image" href="images/hero_es.jpg" fetchpriority="high">
+
+  <!-- Critical CSS inlined — renders hero without waiting for any file -->
+  <style>
+    :root{--font-sans:'Plus Jakarta Sans',sans-serif;--bg-dark:#fff;--primary:#2563EB;--text-primary:#0f172a;--text-secondary:#475569;--border-color:rgba(37,99,235,0.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-sans),sans-serif;background:#fff;color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    .promo-banner-top{background:#0F172A !important;color:#fff !important;text-align:center;padding:.5rem 1rem;font-size:.82rem;font-weight:700;letter-spacing:.3px;min-height:36px;display:flex;align-items:center;justify-content:center}
+    .hero-section{max-width:700px !important;margin:0 auto !important;padding:.85rem 1.25rem 1.25rem !important;text-align:center !important;display:flex !important;flex-direction:column !important;align-items:center !important}
+    .hero-badge{display:inline-flex !important;align-items:center !important;background:rgba(37,99,235,.08) !important;border:1px solid rgba(37,99,235,.2) !important;color:#2563EB !important;padding:.28rem .85rem !important;border-radius:50px !important;font-size:.76rem !important;font-weight:700 !important;margin-bottom:.55rem !important;letter-spacing:.5px !important;text-transform:uppercase !important}
+    .hero-section h1{font-size:clamp(1.65rem,5vw,2.5rem) !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:-1.2px !important;margin-bottom:.5rem !important;color:#0F172A !important;max-width:640px !important}
+    .hero-section h1 span{background:none !important;-webkit-background-clip:initial !important;-webkit-text-fill-color:#2563EB !important;background-clip:initial !important;color:#2563EB !important}
+    .hero-subheadline{font-size:clamp(.85rem,2.5vw,.98rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.75rem !important;max-width:540px !important;line-height:1.5 !important}
+    .hero-subheadline span{font-weight:700 !important;color:#2563EB !important}
+    .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important;aspect-ratio:4/3 !important;background:#f1f5f9 !important}
+    @media(max-width:600px){.hero-image-container{margin:10px auto 15px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
+    .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
+    .btn-hero-cta{display:block !important;width:100% !important;max-width:310px !important;background:#F97316 !important;color:#fff !important;font-weight:800 !important;font-size:clamp(0.72rem, 3.8vw, 0.9rem) !important;padding:0.8rem 1rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(249, 115, 22, 0.3) !important;transition:transform 0.2s, box-shadow 0.2s !important;white-space:nowrap !important}
+    .hero-security-badges{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;gap:.4rem .75rem !important;font-size:.73rem !important;color:var(--text-secondary) !important;font-weight:600 !important;margin-top:8px !important;width:100% !important}
+    .hero-security-badges span{font-size:0.78rem !important;font-weight:700 !important;color:var(--text-secondary) !important;display:inline-flex !important;align-items:center !important;gap:0.25rem !important;letter-spacing:0.2px !important}
+    
+    /* Cache-bypassing Overrides for Social Proof Toasts & Hero spacing */
+    .social-proof-toast {
+      gap: 8px !important;
+      padding: 6px 10px !important;
+      border-radius: 8px !important;
+      max-width: 210px !important;
+    }
+    .toast-icon {
+      width: 24px !important;
+      height: 24px !important;
+      font-size: 0.85rem !important;
+    }
+    .toast-content {
+      line-height: 1.3 !important;
+    }
+    .toast-title {
+      font-size: 0.72rem !important;
+    }
+    .toast-body {
+      font-size: 0.68rem !important;
+      margin: 1px 0 0 0 !important;
+    }
+    .toast-time {
+      font-size: 0.58rem !important;
+      margin-top: 2px !important;
+    }
+    @media (max-width: 500px) {
+      .social-proof-container {
+        left: 10px !important;
+        bottom: 15px !important;
+        right: auto !important;
+        max-width: 210px !important;
+      }
+      .social-proof-toast {
+        max-width: 210px !important;
+        width: auto !important;
+      }
+    }
+  </style>
+
+  <!-- Google Fonts: Loaded asynchronously to prevent render blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap"></noscript>
+
+  <!-- Non-critical CSS: deferred so it doesn't block first paint -->
+  <link rel="preload" as="style" href="css/landing_es.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/landing_es.css"></noscript>
+
+  <!-- UTMify: track UTMs across funnel -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <!-- UTMify Pixel -->
+  <script>
+  window.pixelId = "6a4c43a59b3324aca82e49b5";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+</head>
+<body>
+
+  <!-- Top Promo Banner -->
+  <div class="promo-banner-top">
+    <span>🏀 OFERTA VÁLIDA SOLO HOY • <strong id="promo-date"></strong></span>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-badge">⚡ Asistente Digital de Entrenador</div>
+    <h1>Tu Entrenamiento No Necesita Más Ideas. <span>Necesita Más Tiempo.</span></h1>
+    
+    <p class="hero-subheadline">
+      Tú conoces el juego. El problema nunca fue tu capacidad, sino el tiempo que pierdes organizando cada sesión, <span>CoachBrain</span> convierte tus ideas en un entrenamiento completo y listo en minutos, <span>Menos tiempo planificando. Más tiempo entrenando</span>.
+    </p>
+
+    <!-- Hero Mockup Image -->
+    <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0; aspect-ratio: 4/3; background: #f1f5f9;">
+      <img src="images/hero_es.jpg" alt="CoachBrain Asistente de Entrenamiento de Baloncesto" width="600" height="450" style="width: 100%; height: auto; display: block;" fetchpriority="high">
+    </div>
+    
+    <div class="cta-container">
+      <a href="#app-glance" class="btn-hero-cta">OBTÉN ACCESO INMEDIATO AHORA</a>
+      <div class="hero-security-badges">
+        <span>🔒 Pago 100% Seguro</span>
+        <span>🛡️ Garantía de Devolución de 7 Días</span>
+        <span>⚡ Acceso de Por Vida</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section representing 'Designed for Every Coach & Team' -->
+  <section id="recursos">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <h2>Diseñado para <span>Cada Entrenador y Equipo</span></h2>
+        <p>Sesiones de entrenamiento personalizadas adaptables para niveles juveniles, junior y senior. Ideal para entrenadores de equipos, entrenadores personales y academias de baloncesto.</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-item">
+          <span class="feature-meta-tag">01 / Planificación de Entrenamientos</span>
+          <div class="feature-icon-wrapper">✓</div>
+          <h3>Planificación de Entrenamientos Personalizada</h3>
+          <p>Ingresa la edad de los jugadores, la cantidad, el tamaño de la cancha y la duración. Obtén al instante un plan de sesión personalizado minuto a minuto.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-item">
+          <span class="feature-meta-tag">02 / Restricciones Dinámicas</span>
+          <div class="feature-icon-wrapper">✓</div>
+          <h3>Ajuste de Restricciones de Cancha</h3>
+          <p>¿Solo tienes media cancha o 6 jugadores? CoachBrain ajusta los ejercicios sobre la marcha para maximizar las repeticiones activas.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+          <span class="feature-meta-tag">03 / Inteligencia Táctica</span>
+          <div class="feature-icon-wrapper">✓</div>
+          <h3>Soluciones Tácticas Instantáneas</h3>
+          <p>Haz preguntas tácticas (por ejemplo, cómo superar una zona 2-3) y obtén jugadas de baloncesto inmediatamente aplicables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Bonuses section representing 'BÔNUS' -->
+  <section id="bonuses" class="section-wrapper">
+    <div class="section-header">
+      <h2>Bonos Exclusivos Incluidos <span>Hoy</span></h2>
+      <p>Desbloquea estos recursos de entrenamiento digital al instante al asegurar tu acceso.</p>
+    </div>
+    
+    <div class="bonus-grid">
+      <!-- Bonus 1 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus1.jpg" alt="Bonus 1 - Individual Technique Drills" class="bonus-thumb-img" loading="lazy" decoding="async">
+        </div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 1</span>
+          <h3>BONO: Ejercicios de Técnica Individual</h3>
+          <p>Rutinas enfocadas en entrenamientos de jugadores, mecánica de tiro y ejercicios avanzados de manejo de balón.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$9.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bonus 2 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus2.jpg" alt="Bonus 2 - Complete Tactical Training Guide" class="bonus-thumb-img" loading="lazy" decoding="async">
+        </div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 2</span>
+          <h3>BONO: Guía Completa de Entrenamiento Táctico</h3>
+          <p>Un libro de jugadas con jugadas ofensivas esenciales, jugadas a balón parado y estructuras de media cancha.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$12.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus 3 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus3.jpg" alt="Bonus 3 - Conditioning & Agility Circuits" class="bonus-thumb-img" loading="lazy" decoding="async">
+        </div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 3</span>
+          <h3>BONO: Circuitos de Acondicionamiento y Agilidad</h3>
+          <p>Circuitos estructurados de desarrollo físico y velocidad en estaciones para desarrollar atletismo y rapidez.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$15.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Peek Section (Look Inside the App / PandaVideo) -->
+  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
+      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Un Vistazo a lo que Obtendrás</h2>
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
+      </p>
+    </div>
+    
+    <!-- Video Container (Native Video with Intersection Observer Autoplay/Audio control) -->
+    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
+      <video
+        id="app-preview-video"
+        src="videos/video_pg_coachbrain.mp4"
+        style="width: 100%; height: 100%; display: block;"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+    <script>
+      (function() {
+        var video = document.getElementById('app-preview-video');
+        if (!video) return;
+
+        // Force play unmuted immediately when user clicks the hero CTA button
+        var heroBtn = document.querySelector('a[href="#app-glance"]');
+        if (heroBtn) {
+          heroBtn.addEventListener('click', function() {
+            video.muted = false;
+            video.currentTime = 0;
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function(e) {
+                // If browser blocks, try muted play fallback
+                video.muted = true;
+                video.play();
+              });
+            }
+          });
+        }
+
+        var options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5 // Play when 50% of the video is visible
+        };
+
+        var observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              // Only trigger scroll autoplay if the video is not already playing
+              if (video.paused) {
+                video.muted = false; 
+                video.currentTime = 0;
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                  playPromise.catch(function(error) {
+                    video.muted = true;
+                    video.play();
+                  });
+                }
+              }
+            } else {
+              // Pause when out of view
+              video.pause();
+            }
+          });
+        }, options);
+
+        observer.observe(video);
+      })();
+    </script>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
+        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
+          <div class="testimonial-author">Michael R.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
+          <div class="testimonial-author">Jason T.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
+          <div class="testimonial-author">Daniel M.</div>
+          <div class="testimonial-role">Entrenador de la AAU</div>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"No buscaba otra biblioteca de ejercicios. Necesitaba algo que realmente me ayudara a planificar entrenamientos más rápido. CoachBrain hace exactamente eso, y ahora paso más tiempo entrenando en lugar de planificando."</p>
+          <div class="testimonial-author">Chris W.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing section -->
+  <section class="pricing-wrapper" id="pricing">
+    <div class="section-wrapper" style="padding-top: 0; padding-bottom: 2rem;">
+      <div class="section-header">
+        <h2>Elige Tu <span>Nivel de Entrenador</span></h2>
+        <p>Obtén acceso de por vida hoy. Paga una vez, úsalo para siempre.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <h3 class="plan-title">Entrenador Básico</h3>
+          <div class="price-box">
+            <span class="price-original">de $19.99</span>
+            <h4>$9<span>.99</span></h4>
+          </div>
+          
+          <div class="plan-features">
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Asistente de Entrenador con IA 24/7</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Preguntas tácticas y de reglas ilimitadas</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Generador de planes de entrenamiento personalizados</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Adaptación de ejercicios por edad del jugador</span>
+            </div>
+            <div class="plan-feature-item disabled">
+              <span class="plan-feature-check">×</span>
+              <span>Biblioteca Completa de +150 Ejercicios en Video</span>
+            </div>
+            <div class="plan-feature-item disabled">
+              <span class="plan-feature-check">×</span>
+              <span>Nuevos ejercicios agregados regularmente</span>
+            </div>
+            <div class="plan-feature-item disabled">
+              <span class="plan-feature-check">×</span>
+              <span>Plantillas de planificación preconstruidas</span>
+            </div>
+            <div class="plan-feature-item disabled">
+              <span class="plan-feature-check">×</span>
+              <span>Prompts exclusivos para entrenadores</span>
+            </div>
+            <div class="plan-feature-item disabled">
+              <span class="plan-feature-check">×</span>
+              <span>Prioridad en nuevas herramientas de entrenamiento</span>
+            </div>
+          </div>
+
+          <button id="btn-buy-basic" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto; border: none;">
+            Obtener Entrenador Básico
+          </button>
+          <div class="security-badges-container">
+            <div class="badge-item">🔒 Pago Seguro</div>
+            <div class="badge-item">🛡️ Garantía de Reembolso de 7 Días</div>
+            <div class="badge-item">⚡ Acceso Inmediato de Por Vida</div>
+          </div>
+        </div>
+
+        <!-- Complete Plan (Featured/Premium) -->
+        <div class="pricing-card premium">
+          <span class="pricing-badge">Más Popular</span>
+          <h3 class="plan-title">Entrenador Completo</h3>
+          <div class="price-box">
+            <span class="price-original">de $49.99</span>
+            <h4>$24<span>.99</span></h4>
+          </div>
+          
+          <div class="plan-features">
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Todo en Entrenador Básico</span>
+            </div>
+            <div class="plan-feature-item bonus">
+              <span class="plan-feature-check">✓</span>
+              <span><span class="bonus-label">BONO</span> Biblioteca Completa de +150 Ejercicios en Video</span>
+            </div>
+            <div class="plan-feature-item bonus">
+              <span class="plan-feature-check">✓</span>
+              <span><span class="bonus-label">BONO</span> Ejercicios de Técnica Individual</span>
+            </div>
+            <div class="plan-feature-item bonus">
+              <span class="plan-feature-check">✓</span>
+              <span><span class="bonus-label">BONO</span> Guía de Entrenamiento Táctico</span>
+            </div>
+            <div class="plan-feature-item bonus">
+              <span class="plan-feature-check">✓</span>
+              <span><span class="bonus-label">BONO</span> Circuitos de Acondicionamiento y Agilidad</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Nuevos ejercicios agregados regularmente</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Plantillas de planificación preconstruidas</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Prompts exclusivos para entrenadores</span>
+            </div>
+            <div class="plan-feature-item">
+              <span class="plan-feature-check">✓</span>
+              <span>Prioridad en nuevas herramientas de entrenamiento</span>
+            </div>
+          </div>
+
+          <a href="https://pay.hotmart.com/F106681760W?off=3lay4tvq&checkoutMode=10" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
+            Obtener Entrenador Completo
+          </a>
+          <div class="security-badges-container">
+            <div class="badge-item">🔒 Pago Seguro</div>
+            <div class="badge-item">🛡️ Garantía de Reembolso de 7 Días</div>
+            <div class="badge-item">⚡ Acceso Inmediato de Por Vida</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Day Guarantee Block -->
+      <div class="guarantee-block">
+        <div class="guarantee-seal">🛡️</div>
+        <div class="guarantee-text">
+          <h3>Garantía Incondicional de Devolución de Dinero de 7 Días</h3>
+          <p>Prueba CoachBrain durante 7 días. Si no estás ahorrando horas de planificación o sientes que no ayuda a tu equipo, envíanos un correo electrónico o comunícate con soporte, y <strong>te reembolsaremos el 100% de tu dinero</strong>. Sin preguntas, sin problemas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section representing 'Garantia de 7 dias e perguntas' -->
+  <section id="faq" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
+    <div class="section-header">
+      <h2>Preguntas <span>Frecuentes</span></h2>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-card">
+        <div class="faq-title">¿Cómo accedo a CoachBrain? <span>+</span></div>
+        <div class="faq-desc">Inmediatamente después de la confirmación del pago, recibirás un correo electrónico con credenciales seguras para acceder a la plataforma desde cualquier dispositivo (teléfono, tableta, computadora).</div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-title">¿Hay cuotas mensuales? <span>+</span></div>
+        <div class="faq-desc">¡No! Esta es una oferta de lanzamiento. Pagas una tarifa única hoy y obtienes acceso de por vida sin suscripciones recurrentes.</div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-title">¿Funciona para todos los grupos de edad? <span>+</span></div>
+        <div class="faq-desc">Sí. CoachBrain está entrenado para adaptar planes desde ejercicios básicos de coordinación sub-8 hasta libros de jugadas avanzados de equipos universitarios.</div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-title">¿Cómo funciona la garantía de 7 días? <span>+</span></div>
+        <div class="faq-desc">Si no estás satisfecho con CoachBrain dentro de los primeros 7 días, avísanos y emitiremos un reembolso completo de inmediato.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-wrap">
+    <p>&copy; 2026 BasketballPro & CoachBrain. Todos los derechos reservados. Plataforma de asistente interactivo de entrenamiento.</p>
+  </footer>
+
+  <!-- Upgrade Popup Modal -->
+  <div id="upgradeModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close">&times;</button>
+      <div class="modal-header">
+        <span class="modal-alert-badge">⚠️ ¡ESPERA! MEJORA EXCLUSIVA ÚNICA</span>
+        <h2>¿Quieres ejercicios visuales en video para tus entrenamientos?</h2>
+      </div>
+      <div class="modal-body">
+        <p>Por solo <strong>$14.99 USD más</strong>, puedes mejorar al <strong>Plan Completo</strong> que incluye:</p>
+        <ul class="modal-features-list">
+          <li>🏀 <strong>Biblioteca de +150 Ejercicios en Video</strong> - Mira exactamente cómo ejecutar cada ejercicio en HD.</li>
+          <li>📅 <strong>Plantillas de Planificación de Temporada Preconstruidas</strong> - Estructura tu año completo en minutos.</li>
+          <li>⚙️ <strong>Prompts Exclusivos y Nuevas Herramientas</strong> - Obtén las mejores entradas para tu asistente de entrenador con IA.</li>
+        </ul>
+        <p class="modal-savings-tag">Ahorras un 50% en esta oferta exclusiva al mejorar ahora.</p>
+        
+        <a id="btnUpgrade" href="https://pay.hotmart.com/F106681760W?off=v29tut0n&checkoutMode=10" class="modal-btn-upgrade">SÍ, MEJORAR MI PLAN POR +$14.99</a>
+        <button id="btnKeepBasic" class="modal-btn-keep-basic">No, gracias. Prefiero quedarme con el Plan Básico por $9.99</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Social Proof Container -->
+  <div class="social-proof-container" id="social-proof"></div>
+
+  <!-- FAQ Accordion and Countdown Timer script -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const isActive = card.classList.contains('active');
+        document.querySelectorAll('.faq-card').forEach(c => {
+          c.classList.remove('active');
+          c.querySelector('.faq-title span').textContent = '+';
+        });
+        
+        if (!isActive) {
+          card.classList.add('active');
+          card.querySelector('.faq-title span').textContent = '−';
+        }
+      });
+    });
+
+    // Set dynamic date in promo banner
+    const dateElement = document.getElementById('promo-date');
+    if (dateElement) {
+      const options = { day: 'numeric', month: 'long' };
+      const today = new Date().toLocaleDateString('es-ES', options);
+      dateElement.textContent = today;
+    }
+
+    // Social Proof Purchase Notifications
+    const names = ['Carlos Gómez', 'Javier Rodríguez', 'Alejandro Fernández', 'Miguel Silva', 'Sofía Pérez', 'Roberto Martínez', 'Diego González', 'Elena Sánchez', 'Fernando Romero', 'Andrés Torres', 'Juan Díaz', 'Laura Ruiz', 'Mateo Morales', 'Gabriel Castro', 'Daniel Ortega', 'Tomás Navarro', 'Marcos Delgado', 'Camila Vargas', 'Luis Medina', 'Sebastián Herrera'];
+    const cities = ['Madrid, España', 'Barcelona, España', 'Ciudad de México, México', 'Buenos Aires, Argentina', 'Bogotá, Colombia', 'Santiago, Chile', 'Lima, Perú', 'Caracas, Venezuela', 'Montevideo, Uruguay', 'Quito, Ecuador', 'San José, Costa Rica', 'Guatemala, Guatemala', 'San Juan, Puerto Rico', 'Miami, EE.UU.', 'Guadalajara, México', 'Valencia, España', 'Sevilla, España', 'Medellín, Colombia', 'Monterrey, México', 'Rosario, Argentina'];
+    const products = ['Plan Entrenador Completo 🏆', 'Plan Entrenador Básico 🏀'];
+    const emojis = ['🏀', '🔥', '✅', '⚡', '🎉'];
+    const toastContainer = document.getElementById('social-proof');
+
+    function showNotification() {
+      toastContainer.innerHTML = ''; // Clear previous
+
+      const name = names[Math.floor(Math.random() * names.length)];
+      const city = cities[Math.floor(Math.random() * cities.length)];
+      // ~75% buy Complete Coach
+      const product = Math.random() > 0.25 ? products[0] : products[1];
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const toast = document.createElement('div');
+      toast.className = 'social-proof-toast';
+      toast.innerHTML = `
+        <div class="toast-icon">${emoji}</div>
+        <div class="toast-content">
+          <p class="toast-title"><strong>${name}</strong> (${city})</p>
+          <p class="toast-body">Compró el <strong>${product}</strong></p>
+          <span class="toast-time">justo ahora</span>
+        </div>
+      `;
+
+      toastContainer.appendChild(toast);
+
+      // Slide in
+      setTimeout(() => {
+        toast.classList.add('show');
+      }, 100);
+
+      // Slide out and remove toast after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+          toast.remove();
+        }, 500);
+      }, 5000);
+    }
+
+    // Run first notification after 6 seconds, then repeat with random delays
+    setTimeout(showNotification, 6000);
+    
+    function triggerNext() {
+      const delay = 18000 + Math.random() * 12000; // Between 18s and 30s
+      setTimeout(() => {
+        showNotification();
+        triggerNext();
+      }, delay);
+    }
+    triggerNext();
+
+
+
+    // Popup Modal Logic
+    const basicBtn = document.getElementById('btn-buy-basic');
+    const modal = document.getElementById('upgradeModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const keepBasicBtn = document.getElementById('btnKeepBasic');
+
+    if (basicBtn && modal) {
+      basicBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        setTimeout(() => {
+          modal.classList.add('active');
+        }, 10);
+      });
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (keepBasicBtn) {
+      keepBasicBtn.addEventListener('click', function() {
+        closeModal();
+        // Redirect directly to the Basic Plan Hotmart checkout link
+        window.location.href = "https://pay.hotmart.com/F106681760W?off=3inoklwx&checkoutMode=10";
+      });
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+  </script>
+
+  <!-- Lazy load below-fold images to reduce initial payload -->
+  <script>
+    document.querySelectorAll('img:not([fetchpriority="high"])').forEach(function(img){
+      if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy');
+      if(!img.hasAttribute('decoding')) img.setAttribute('decoding','async');
+    });
+  </script>
+</body>
+</html>
