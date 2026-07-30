@@ -110,7 +110,7 @@
     <span>🏀 OFERTA VÁLIDA SOLO HOY • <strong id="promo-date"></strong></span>
   </div>
 
-  <!-- Hero Section -->
+  <!-- 1ª SEÇÃO: Hero Section (Título, Sub-título, Foto, Botão para Oferta) -->
   <header class="hero-section">
     <div class="hero-badge">⚡ Asistente Digital de Entrenador</div>
     <h1>Tu Entrenamiento No Necesita Más Ideas. <span>Necesita Más Tiempo.</span></h1>
@@ -125,7 +125,7 @@
     </div>
     
     <div class="cta-container">
-      <a href="#app-glance" class="btn-hero-cta">OBTÉN ACCESO INMEDIATO AHORA</a>
+      <a href="#pricing" class="btn-hero-cta">OBTÉN ACCESO INMEDIATO AHORA</a>
       <div class="hero-security-badges">
         <span>🔒 Pago 100% Seguro</span>
         <span>🛡️ Garantía de Devolución de 7 Días</span>
@@ -134,11 +134,11 @@
     </div>
   </header>
 
-  <!-- Features Section representing 'Designed for Every Coach & Team' -->
+  <!-- 2ª SEÇÃO: O Que Você Vai Receber (Lo que vas a recibir) -->
   <section id="recursos">
     <div class="section-wrapper">
       <div class="section-header">
-        <h2>Diseñado para <span>Cada Entrenador y Equipo</span></h2>
+        <h2>Lo Que Vas a Recibir con <span>CoachBrain</span></h2>
         <p>Sesiones de entrenamiento personalizadas adaptables para niveles juveniles, junior y senior. Ideal para entrenadores de equipos, entrenadores personales y academias de baloncesto.</p>
       </div>
       
@@ -170,12 +170,38 @@
     </div>
   </section>
 
-
-
-  <!-- Bonuses section representing 'BÔNUS' -->
-  <section id="bonuses" class="section-wrapper">
+  <!-- 3ª SEÇÃO: Por Que Escolher Nosso Material? (Beneficios) -->
+  <section id="beneficios" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
     <div class="section-header">
-      <h2>Bonos Exclusivos Incluidos <span>Hoy</span></h2>
+      <h2>¿Por Qué Elegir <span>Nuestro Material?</span></h2>
+      <p>Diseñado estratégicamente para resolver los mayores desafíos de tiempo y organización en la cancha.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item" style="border-top: 3px solid #2563EB;">
+        <div class="feature-icon-wrapper" style="background: rgba(37, 99, 235, 0.1); color: #2563EB;">⏱️</div>
+        <h3>Ahorra Más de 8 Horas Semanales</h3>
+        <p>Elimina la frustración de buscar ejercicios dispersos en internet. Diseña tu rutina completa en menos de 2 minutos.</p>
+      </div>
+
+      <div class="feature-item" style="border-top: 3px solid #F97316;">
+        <div class="feature-icon-wrapper" style="background: rgba(249, 115, 22, 0.1); color: #F97316;">📋</div>
+        <h3>Estructura Profesional Minuto a Minuto</h3>
+        <p>Mantén a tus jugadores concentrados y activos con calentamientos, técnica, táctica y competencias perfectamente cronometradas.</p>
+      </div>
+
+      <div class="feature-item" style="border-top: 3px solid #10B981;">
+        <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">⚡</div>
+        <h3>Acceso Vitalicio Sin Mensualidades</h3>
+        <p>Un solo pago hoy te otorga acceso ilimitado para siempre. Úsalo desde tu teléfono, tableta o computadora en cualquier lugar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4ª SEÇÃO: 3 Bônus da Oferta -->
+  <section id="bonuses" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
+    <div class="section-header">
+      <h2>3 Bonos Exclusivos Incluidos <span>Hoy</span></h2>
       <p>Desbloquea estos recursos de entrenamiento digital al instante al asegurar tu acceso.</p>
     </div>
     
@@ -233,133 +259,18 @@
     </div>
   </section>
 
-  <!-- App Peek Section (Look Inside the App / PandaVideo) -->
-  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
-    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
-      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
-      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Un Vistazo a lo que Obtendrás</h2>
-      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
-        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
-      </p>
-    </div>
-    
-    <!-- Video Container (Native Video with Intersection Observer Autoplay/Audio control) -->
-    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
-      <video
-        id="app-preview-video"
-        src="videos/video_pg_coachbrain.mp4"
-        style="width: 100%; height: 100%; display: block;"
-        autoplay
-        muted
-        loop
-        playsinline>
-      </video>
-    </div>
-    <script>
-      (function() {
-        var video = document.getElementById('app-preview-video');
-        if (!video) return;
-
-        // Force play unmuted immediately when user clicks the hero CTA button
-        var heroBtn = document.querySelector('a[href="#app-glance"]');
-        if (heroBtn) {
-          heroBtn.addEventListener('click', function() {
-            video.muted = false;
-            video.currentTime = 0;
-            var playPromise = video.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(function(e) {
-                // If browser blocks, try muted play fallback
-                video.muted = true;
-                video.play();
-              });
-            }
-          });
-        }
-
-        var options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5 // Play when 50% of the video is visible
-        };
-
-        var observer = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              // Only trigger scroll autoplay if the video is not already playing
-              if (video.paused) {
-                video.muted = false; 
-                video.currentTime = 0;
-                var playPromise = video.play();
-                if (playPromise !== undefined) {
-                  playPromise.catch(function(error) {
-                    video.muted = true;
-                    video.play();
-                  });
-                }
-              }
-            } else {
-              // Pause when out of view
-              video.pause();
-            }
-          });
-        }, options);
-
-        observer.observe(video);
-      })();
-    </script>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
-        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
-      </div>
-      
-      <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
-          <div class="testimonial-author">Michael R.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
-        </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
-          <div class="testimonial-author">Jason T.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
-        </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
-          <div class="testimonial-author">Daniel M.</div>
-          <div class="testimonial-role">Entrenador de la AAU</div>
-        </div>
-        
-        <!-- Testimonial 4 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"No buscaba otra biblioteca de ejercicios. Necesitaba algo que realmente me ayudara a planificar entrenamientos más rápido. CoachBrain hace exactamente eso, y ahora paso más tiempo entrenando en lugar de planificando."</p>
-          <div class="testimonial-author">Chris W.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing section -->
-  <section class="pricing-wrapper" id="pricing">
+  <!-- 5ª SEÇÃO: Oferta com Temporizador Limitado (15 minutos) -->
+  <section class="pricing-wrapper" id="pricing" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
     <div class="section-wrapper" style="padding-top: 0; padding-bottom: 2rem;">
       <div class="section-header">
         <h2>Elige Tu <span>Nivel de Entrenador</span></h2>
         <p>Obtén acceso de por vida hoy. Paga una vez, úsalo para siempre.</p>
+      </div>
+
+      <!-- 15 Minute Countdown Timer Badge -->
+      <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); color: #dc2626; padding: 10px 18px; border-radius: 12px; font-weight: 800; font-size: 0.95rem; text-align: center; max-width: 460px; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <span>⏰ LA OFERTA EXPIRA EN:</span>
+        <span id="countdown-clock" style="background: #dc2626; color: #fff; padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 1.15rem;">15:00</span>
       </div>
 
       <div class="pricing-grid">
@@ -478,19 +389,131 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- 7 Day Guarantee Block -->
-      <div class="guarantee-block">
-        <div class="guarantee-seal">🛡️</div>
-        <div class="guarantee-text">
-          <h3>Garantía Incondicional de Devolución de Dinero de 7 Días</h3>
-          <p>Prueba CoachBrain durante 7 días. Si no estás ahorrando horas de planificación o sientes que no ayuda a tu equipo, envíanos un correo electrónico o comunícate con soporte, y <strong>te reembolsaremos el 100% de tu dinero</strong>. Sin preguntas, sin problemas.</p>
+  <!-- 6ª SEÇÃO: Exemplos do Material (Vídeo Demonstrativo) -->
+  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
+      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Ejemplos del Material en Video</h2>
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
+      </p>
+    </div>
+    
+    <!-- Video Container -->
+    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
+      <video
+        id="app-preview-video"
+        src="videos/video_pg_coachbrain.mp4"
+        style="width: 100%; height: 100%; display: block;"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+    <script>
+      (function() {
+        var video = document.getElementById('app-preview-video');
+        if (!video) return;
+
+        var heroBtn = document.querySelector('a[href="#pricing"]');
+        if (heroBtn) {
+          heroBtn.addEventListener('click', function() {
+            video.muted = false;
+            video.currentTime = 0;
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function(e) {
+                video.muted = true;
+                video.play();
+              });
+            }
+          });
+        }
+
+        var options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5
+        };
+
+        var observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (video.paused) {
+                video.muted = false; 
+                video.currentTime = 0;
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                  playPromise.catch(function(error) {
+                    video.muted = true;
+                    video.play();
+                  });
+                }
+              }
+            } else {
+              video.pause();
+            }
+          });
+        }, options);
+
+        observer.observe(video);
+      })();
+    </script>
+  </section>
+
+  <!-- 7ª SEÇÃO: 3 Depoimentos de Clientes -->
+  <section id="testimonials" style="border-top: 1px solid var(--border-color);">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
+        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
+          <div class="testimonial-author">Michael R.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
+          <div class="testimonial-author">Jason T.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
+          <div class="testimonial-author">Daniel M.</div>
+          <div class="testimonial-role">Entrenador de la AAU</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section representing 'Garantia de 7 dias e perguntas' -->
+  <!-- 8ª SEÇÃO: Garantia Incondicional de 7 Dias + FAQ + Footer -->
+  <section id="garantia" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
+    <!-- 7 Day Guarantee Block -->
+    <div class="guarantee-block">
+      <div class="guarantee-seal">🛡️</div>
+      <div class="guarantee-text">
+        <h3>Garantía Incondicional de Devolución de Dinero de 7 Días</h3>
+        <p>Prueba CoachBrain durante 7 días. Si no estás ahorrando horas de planificación o sientes que no ayuda a tu equipo, envíanos un correo electrónico o comunícate con soporte, y <strong>te reembolsaremos el 100% de tu dinero</strong>. Sin preguntas, sin problemas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
   <section id="faq" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
     <div class="section-header">
       <h2>Preguntas <span>Frecuentes</span></h2>
@@ -550,8 +573,33 @@
   <!-- Custom Social Proof Container -->
   <div class="social-proof-container" id="social-proof"></div>
 
-  <!-- FAQ Accordion and Countdown Timer script -->
+  <!-- FAQ Accordion, Countdown Timer and Social Proof Scripts -->
   <script>
+    // 15-Minute Countdown Timer
+    (function() {
+      var timerMinutes = 15;
+      var timerSeconds = 0;
+      var clockEl = document.getElementById('countdown-clock');
+      if (!clockEl) return;
+
+      var interval = setInterval(function() {
+        if (timerSeconds === 0) {
+          if (timerMinutes === 0) {
+            clearInterval(interval);
+            return;
+          }
+          timerMinutes--;
+          timerSeconds = 59;
+        } else {
+          timerSeconds--;
+        }
+
+        var minStr = timerMinutes < 10 ? '0' + timerMinutes : timerMinutes;
+        var secStr = timerSeconds < 10 ? '0' + timerSeconds : timerSeconds;
+        clockEl.textContent = minStr + ':' + secStr;
+      }, 1000);
+    })();
+
     // FAQ Accordion
     document.querySelectorAll('.faq-card').forEach(card => {
       card.addEventListener('click', () => {
@@ -584,11 +632,10 @@
     const toastContainer = document.getElementById('social-proof');
 
     function showNotification() {
-      toastContainer.innerHTML = ''; // Clear previous
+      toastContainer.innerHTML = '';
 
       const name = names[Math.floor(Math.random() * names.length)];
       const city = cities[Math.floor(Math.random() * cities.length)];
-      // ~75% buy Complete Coach
       const product = Math.random() > 0.25 ? products[0] : products[1];
       const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 
@@ -605,12 +652,10 @@
 
       toastContainer.appendChild(toast);
 
-      // Slide in
       setTimeout(() => {
         toast.classList.add('show');
       }, 100);
 
-      // Slide out and remove toast after 5 seconds
       setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => {
@@ -619,19 +664,16 @@
       }, 5000);
     }
 
-    // Run first notification after 6 seconds, then repeat with random delays
     setTimeout(showNotification, 6000);
     
     function triggerNext() {
-      const delay = 18000 + Math.random() * 12000; // Between 18s and 30s
+      const delay = 18000 + Math.random() * 12000;
       setTimeout(() => {
         showNotification();
         triggerNext();
       }, delay);
     }
     triggerNext();
-
-
 
     // Popup Modal Logic
     const basicBtn = document.getElementById('btn-buy-basic');
@@ -663,7 +705,6 @@
     if (keepBasicBtn) {
       keepBasicBtn.addEventListener('click', function() {
         closeModal();
-        // Redirect directly to the Basic Plan Hotmart checkout link
         window.location.href = "https://pay.hotmart.com/D106687019Q?off=ili7m83u&checkoutMode=10";
       });
     }
