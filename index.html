@@ -267,40 +267,112 @@
     </div>
   </section>
 
-  <!-- 4ª SEÇÃO: 3 Depoimentos de Clientes -->
-  <section id="testimonials" style="border-top: 1px solid var(--border-color);">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
-        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
+  <!-- 4ª SEÇÃO: Depoimentos de Clientes em Carrossel -->
+  <section id="testimonials" style="border-top: 1px solid var(--border-color); padding: 3.5rem 1rem;">
+    <div class="section-wrapper" style="padding-top: 0; padding-bottom: 1rem;">
+      <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+        <span style="color: #16a34a; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">RESULTADOS REALES</span>
+        <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 0.75rem; letter-spacing: -1px; text-align: center;">Lo Que Dicen <span>Otros Entrenadores</span></h2>
+        <p style="font-size: clamp(0.95rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+          Mira los mensajes reales de entrenadores que ya usan CoachBrain en sus equipos.
+        </p>
       </div>
       
-      <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
-          <div class="testimonial-author">Michael R.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
+      <!-- Carousel Container -->
+      <div class="testimonial-carousel-wrapper" style="max-width: 380px; width: 100%; margin: 0 auto; position: relative;">
+        <!-- Navigation Arrows -->
+        <button id="carousel-prev" style="position: absolute; left: -18px; top: 50%; transform: translateY(-50%); z-index: 10; background: #ffffff; border: 1px solid rgba(15,23,42,0.12); color: #0f172a; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease;">❮</button>
+        <button id="carousel-next" style="position: absolute; right: -18px; top: 50%; transform: translateY(-50%); z-index: 10; background: #ffffff; border: 1px solid rgba(15,23,42,0.12); color: #0f172a; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease;">❯</button>
+
+        <!-- Slides Viewport -->
+        <div id="carousel-viewport" style="overflow: hidden; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(15,23,42,0.08); background: #ffffff; touch-action: pan-y;">
+          <div id="carousel-track" style="display: flex; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); width: 300%;">
+            <!-- Slide 1: Javier Moreno -->
+            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+              <img src="images/depoimento1.png" alt="Testimonio Javier Moreno" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
+            </div>
+            <!-- Slide 2: Sergio López -->
+            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+              <img src="images/depoimento2.png" alt="Testimonio Sergio López" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
+            </div>
+            <!-- Slide 3: Álvaro García -->
+            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+              <img src="images/depoimento3.png" alt="Testimonio Álvaro García" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
+            </div>
+          </div>
         </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
-          <div class="testimonial-author">Jason T.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
-        </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
-          <div class="testimonial-author">Daniel M.</div>
-          <div class="testimonial-role">Entrenador de la AAU</div>
+
+        <!-- Carousel Dots -->
+        <div style="display: flex; justify-content: center; gap: 8px; margin-top: 15px;">
+          <span class="carousel-dot active" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: #16a34a; cursor: pointer; transition: all 0.3s ease;"></span>
+          <span class="carousel-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: all 0.3s ease;"></span>
+          <span class="carousel-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: all 0.3s ease;"></span>
         </div>
       </div>
     </div>
+
+    <!-- Carousel Controller Script -->
+    <script>
+      (function() {
+        var track = document.getElementById('carousel-track');
+        var prevBtn = document.getElementById('carousel-prev');
+        var nextBtn = document.getElementById('carousel-next');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var viewport = document.getElementById('carousel-viewport');
+        if (!track || !viewport) return;
+
+        var currentIndex = 0;
+        var totalSlides = 3;
+
+        function updateCarousel(index) {
+          currentIndex = (index + totalSlides) % totalSlides;
+          track.style.transform = 'translateX(-' + (currentIndex * 33.3333) + '%)';
+          dots.forEach(function(dot, i) {
+            if (i === currentIndex) {
+              dot.style.background = '#16a34a';
+              dot.style.transform = 'scale(1.2)';
+            } else {
+              dot.style.background = '#cbd5e1';
+              dot.style.transform = 'scale(1)';
+            }
+          });
+        }
+
+        prevBtn.addEventListener('click', function() {
+          updateCarousel(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', function() {
+          updateCarousel(currentIndex + 1);
+        });
+
+        dots.forEach(function(dot) {
+          dot.addEventListener('click', function() {
+            var idx = parseInt(this.getAttribute('data-index'), 10);
+            updateCarousel(idx);
+          });
+        });
+
+        <!-- Touch Swipe Support for Mobile -->
+        var startX = 0;
+        var endX = 0;
+        viewport.addEventListener('touchstart', function(e) {
+          startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        viewport.addEventListener('touchend', function(e) {
+          endX = e.changedTouches[0].clientX;
+          var diffX = startX - endX;
+          if (Math.abs(diffX) > 40) {
+            if (diffX > 0) {
+              updateCarousel(currentIndex + 1);
+            } else {
+              updateCarousel(currentIndex - 1);
+            }
+          }
+        }, { passive: true });
+      })();
+    </script>
   </section>
 
   <!-- 5ª SEÇÃO: Oferta com Temporizador Limitado (15 minutos) -->
