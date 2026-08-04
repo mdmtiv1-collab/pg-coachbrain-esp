@@ -119,63 +119,8 @@
       Dile a CoachBrain la edad de tus jugadores, el nivel del equipo y lo que quieres entrenar. <span>Recibe calentamiento, ejercicios, tiempos y tácticas listos para aplicar.</span>
     </p>
 
-    <!-- Hero Mockup Image -->
-    <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0; aspect-ratio: 4/3; background: #f1f5f9;">
-      <img src="images/hero_es.jpg" alt="CoachBrain Asistente de Entrenamiento de Baloncesto" width="600" height="450" style="width: 100%; height: auto; display: block;" fetchpriority="high">
-    </div>
-    
-    <div class="cta-container">
-      <a href="#pricing" class="btn-hero-cta">OBTÉN ACCESO INMEDIATO AHORA</a>
-      <div class="hero-security-badges">
-        <span>🔒 Pago 100% Seguro</span>
-        <span>🛡️ Garantía de Devolución de 7 Días</span>
-        <span>⚡ Acceso de Por Vida</span>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- 2ª SEÇÃO: Por Que Escolher Nosso Material? (Beneficios) -->
-  <section id="beneficios" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
-    <div class="section-header">
-      <h2>¿Por Qué Elegir <span>Nuestro Material?</span></h2>
-      <p>Diseñado estratégicamente para resolver los mayores desafíos de tiempo y organización en la cancha.</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-item" style="border-top: 3px solid #2563EB;">
-        <div class="feature-icon-wrapper" style="background: rgba(37, 99, 235, 0.1); color: #2563EB;">⏱️</div>
-        <h3>Ahorra Más de 8 Horas Semanales</h3>
-        <p>Elimina la frustración de buscar ejercicios dispersos en internet. Diseña tu rutina completa en menos de 2 minutos.</p>
-      </div>
-
-      <div class="feature-item" style="border-top: 3px solid #F97316;">
-        <div class="feature-icon-wrapper" style="background: rgba(249, 115, 22, 0.1); color: #F97316;">📋</div>
-        <h3>Estructura Profesional Minuto a Minuto</h3>
-        <p>Mantén a tus jugadores concentrados y activos con calentamientos, técnica, táctica y competencias perfectamente cronometradas.</p>
-      </div>
-
-      <div class="feature-item" style="border-top: 3px solid #10B981;">
-        <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">⚡</div>
-        <h3>Acceso Vitalicio Sin Mensualidades</h3>
-        <p>Un solo pago hoy te otorga acceso ilimitado para siempre. Úsalo desde tu teléfono, tableta o computadora en cualquier lugar.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3ª SEÇÃO: Exemplos do Material (Vídeo Demonstrativo) -->
-  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
-    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
-      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
-      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Ejemplos del Material en Video</h2>
-      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
-        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
-      </p>
-    </div>
-    
-    <!-- Video Container -->
-    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
+    <!-- Hero Video Container -->
+    <div class="hero-video-container" style="max-width: 320px; width: 85%; margin: 15px auto 20px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 12px 35px rgba(0,0,0,.18); aspect-ratio: 9/16; background: #000; position: relative;">
       <video
         id="app-preview-video"
         src="videos/video_pg_coachbrain.mp4"
@@ -209,7 +154,7 @@
         var options = {
           root: null,
           rootMargin: '0px',
-          threshold: 0.5
+          threshold: 0.3
         };
 
         var observer = new IntersectionObserver(function(entries, observer) {
@@ -217,7 +162,6 @@
             if (entry.isIntersecting) {
               if (video.paused) {
                 video.muted = false; 
-                video.currentTime = 0;
                 var playPromise = video.play();
                 if (playPromise !== undefined) {
                   playPromise.catch(function(error) {
@@ -235,6 +179,58 @@
         observer.observe(video);
       })();
     </script>
+    
+    <div class="cta-container">
+      <a href="#pricing" class="btn-hero-cta">OBTÉN ACCESO INMEDIATO AHORA</a>
+      <div class="hero-security-badges">
+        <span>🔒 Pago 100% Seguro</span>
+        <span>🛡️ Garantía de Devolución de 7 Días</span>
+        <span>⚡ Acceso de Por Vida</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2ª SEÇÃO: Por Que Escolher Nosso Material? (Beneficios) -->
+  <section id="beneficios" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
+    <div class="section-header">
+      <h2>¿Por Qué Elegir <span>Nuestro Material?</span></h2>
+      <p>Diseñado estratégicamente para resolver los mayores desafíos de tiempo y organización en la cancha.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item" style="border-top: 3px solid #2563EB;">
+        <div class="feature-icon-wrapper" style="background: rgba(37, 99, 235, 0.1); color: #2563EB;">⏱️</div>
+        <h3>Ahorra Más de 8 Horas Semanales</h3>
+        <p>Elimina la frustración de buscar ejercicios dispersos en internet. Diseña tu rutina completa en menos de 2 minutos.</p>
+      </div>
+
+      <div class="feature-item" style="border-top: 3px solid #F97316;">
+        <div class="feature-icon-wrapper" style="background: rgba(249, 115, 22, 0.1); color: #F97316;">📋</div>
+        <h3>Estructura Profesional Minuto a Minuto</h3>
+        <p>Mantén a tus jugadores concentrados y activos con calentamientos, técnica, táctica y competencias perfectamente cronometradas.</p>
+      </div>
+
+      <div class="feature-item" style="border-top: 3px solid #10B981;">
+        <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">⚡</div>
+        <h3>Acceso Vitalicio Sin Mensualidades</h3>
+        <p>Un solo pago hoy te otorga acceso ilimitado para siempre. Úsalo desde tu teléfono, tableta o computadora en cualquier lugar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3ª SEÇÃO: Vistazo a la Aplicación (Mockup) -->
+  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">PLATAFORMA INTERACTIVA</span>
+      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Un Vistazo a la Plataforma</h2>
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+        Planificación inteligente accesible en todo momento desde tu móvil o computadora.
+      </p>
+    </div>
+    
+    <div class="hero-image-container" style="max-width: 700px; width: 100%; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.12); aspect-ratio: 4/3; background: #f1f5f9;">
+      <img src="images/hero_es.jpg" alt="CoachBrain Asistente de Entrenamiento de Baloncesto" width="600" height="450" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
+    </div>
   </section>
 
   <!-- 4ª SEÇÃO: 3 Depoimentos de Clientes -->
