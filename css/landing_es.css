@@ -260,7 +260,7 @@ body {
 }
 
 .btn-hero-cta {
-  background: #F97316;
+  background: #16a34a;
   color: #ffffff;
   border: none;
   font-weight: 800;
@@ -270,7 +270,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
   transition: var(--transition-all);
   letter-spacing: 0.5px;
   display: inline-block;
@@ -278,14 +278,14 @@ body {
 }
 
 .btn-hero-cta:hover {
-  background: #16a34a;
+  background: #15803d;
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.45);
+  box-shadow: 0 15px 35px rgba(22, 163, 74, 0.45);
 }
 
 /* Primary and Secondary button styles for pricing card & modal */
 .btn-primary {
-  background: #F97316;
+  background: #16a34a;
   color: #fff;
   border: none;
   font-weight: 800;
@@ -295,16 +295,16 @@ body {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
   transition: var(--transition-all);
   display: inline-block;
   text-align: center;
 }
 
 .btn-primary:hover {
-  background: #16a34a;
+  background: #15803d;
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.35);
+  box-shadow: 0 12px 25px rgba(22, 163, 74, 0.4);
 }
 
 /* Sections Global */
@@ -1287,7 +1287,7 @@ body {
 
 .modal-btn-upgrade {
   display: block;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, #16a34a, #22c55e);
   color: #ffffff !important;
   font-weight: 800;
   font-size: 16px;
@@ -1295,13 +1295,14 @@ body {
   border-radius: 999px;
   text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.35);
   transition: all 0.2s ease;
 }
 
 .modal-btn-upgrade:hover {
+  background: linear-gradient(90deg, #15803d, #16a34a);
   transform: translateY(-2px);
-  box-shadow: 0 15px 20px -3px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 15px 20px -3px rgba(22, 163, 74, 0.45);
 }
 
 .modal-btn-keep-basic {
