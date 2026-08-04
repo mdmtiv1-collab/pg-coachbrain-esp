@@ -136,7 +136,7 @@
 
 
 
-  <!-- 3ª SEÇÃO: Por Que Escolher Nosso Material? (Beneficios) -->
+  <!-- 2ª SEÇÃO: Por Que Escolher Nosso Material? (Beneficios) -->
   <section id="beneficios" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding-top: 3rem;">
     <div class="section-header">
       <h2>¿Por Qué Elegir <span>Nuestro Material?</span></h2>
@@ -164,62 +164,110 @@
     </div>
   </section>
 
-  <!-- 4ª SEÇÃO: 3 Bônus da Oferta -->
-  <section id="bonuses" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
-    <div class="section-header">
-      <h2>3 Bonos Exclusivos Incluidos <span>Hoy</span></h2>
-      <p>Desbloquea estos recursos de entrenamiento digital al instante al asegurar tu acceso.</p>
+  <!-- 3ª SEÇÃO: Exemplos do Material (Vídeo Demonstrativo) -->
+  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
+      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Ejemplos del Material en Video</h2>
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
+      </p>
     </div>
     
-    <div class="bonus-grid">
-      <!-- Bonus 1 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus1.jpg" alt="Bonus 1 - Individual Technique Drills" class="bonus-thumb-img" loading="lazy" decoding="async">
-        </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONO 1</span>
-          <h3>BONO: Ejercicios de Técnica Individual</h3>
-          <p>Rutinas enfocadas en entrenamientos de jugadores, mecánica de tiro y ejercicios avanzados de manejo de balón.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Valor:</span>
-            <span class="bonus-value-original">$9.90</span>
-            <span class="bonus-value-free">GRATIS</span>
-          </div>
-        </div>
+    <!-- Video Container -->
+    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
+      <video
+        id="app-preview-video"
+        src="videos/video_pg_coachbrain.mp4"
+        style="width: 100%; height: 100%; display: block;"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+    <script>
+      (function() {
+        var video = document.getElementById('app-preview-video');
+        if (!video) return;
+
+        var heroBtn = document.querySelector('a[href="#pricing"]');
+        if (heroBtn) {
+          heroBtn.addEventListener('click', function() {
+            video.muted = false;
+            video.currentTime = 0;
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function(e) {
+                video.muted = true;
+                video.play();
+              });
+            }
+          });
+        }
+
+        var options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5
+        };
+
+        var observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (video.paused) {
+                video.muted = false; 
+                video.currentTime = 0;
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                  playPromise.catch(function(error) {
+                    video.muted = true;
+                    video.play();
+                  });
+                }
+              }
+            } else {
+              video.pause();
+            }
+          });
+        }, options);
+
+        observer.observe(video);
+      })();
+    </script>
+  </section>
+
+  <!-- 4ª SEÇÃO: 3 Depoimentos de Clientes -->
+  <section id="testimonials" style="border-top: 1px solid var(--border-color);">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
+        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
       </div>
       
-      <!-- Bonus 2 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus2.jpg" alt="Bonus 2 - Complete Tactical Training Guide" class="bonus-thumb-img" loading="lazy" decoding="async">
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
+          <div class="testimonial-author">Michael R.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
         </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONO 2</span>
-          <h3>BONO: Guía Completa de Entrenamiento Táctico</h3>
-          <p>Un libro de jugadas con jugadas ofensivas esenciales, jugadas a balón parado y estructuras de media cancha.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Valor:</span>
-            <span class="bonus-value-original">$12.90</span>
-            <span class="bonus-value-free">GRATIS</span>
-          </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
+          <div class="testimonial-author">Jason T.</div>
+          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
         </div>
-      </div>
-
-      <!-- Bonus 3 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus3.jpg" alt="Bonus 3 - Conditioning & Agility Circuits" class="bonus-thumb-img" loading="lazy" decoding="async">
-        </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONO 3</span>
-          <h3>BONO: Circuitos de Acondicionamiento y Agilidad</h3>
-          <p>Circuitos estructurados de desarrollo físico y velocidad en estaciones para desarrollar atletismo y rapidez.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Valor:</span>
-            <span class="bonus-value-original">$15.90</span>
-            <span class="bonus-value-free">GRATIS</span>
-          </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
+          <div class="testimonial-author">Daniel M.</div>
+          <div class="testimonial-role">Entrenador de la AAU</div>
         </div>
       </div>
     </div>
@@ -358,110 +406,62 @@
     </div>
   </section>
 
-  <!-- 6ª SEÇÃO: Exemplos do Material (Vídeo Demonstrativo) -->
-  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
-    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
-      <span style="color: #2563EB; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">MIRA DENTRO DE LA APLICACIÓN</span>
-      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">Ejemplos del Material en Video</h2>
-      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
-        Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.
-      </p>
+  <!-- 6ª SEÇÃO: 3 Bônus da Oferta -->
+  <section id="bonuses" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
+    <div class="section-header">
+      <h2>3 Bonos Exclusivos Incluidos <span>Hoy</span></h2>
+      <p>Desbloquea estos recursos de entrenamiento digital al instante al asegurar tu acceso.</p>
     </div>
     
-    <!-- Video Container -->
-    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
-      <video
-        id="app-preview-video"
-        src="videos/video_pg_coachbrain.mp4"
-        style="width: 100%; height: 100%; display: block;"
-        autoplay
-        muted
-        loop
-        playsinline>
-      </video>
-    </div>
-    <script>
-      (function() {
-        var video = document.getElementById('app-preview-video');
-        if (!video) return;
-
-        var heroBtn = document.querySelector('a[href="#pricing"]');
-        if (heroBtn) {
-          heroBtn.addEventListener('click', function() {
-            video.muted = false;
-            video.currentTime = 0;
-            var playPromise = video.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(function(e) {
-                video.muted = true;
-                video.play();
-              });
-            }
-          });
-        }
-
-        var options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5
-        };
-
-        var observer = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              if (video.paused) {
-                video.muted = false; 
-                video.currentTime = 0;
-                var playPromise = video.play();
-                if (playPromise !== undefined) {
-                  playPromise.catch(function(error) {
-                    video.muted = true;
-                    video.play();
-                  });
-                }
-              }
-            } else {
-              video.pause();
-            }
-          });
-        }, options);
-
-        observer.observe(video);
-      })();
-    </script>
-  </section>
-
-  <!-- 7ª SEÇÃO: 3 Depoimentos de Clientes -->
-  <section id="testimonials" style="border-top: 1px solid var(--border-color);">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Lo Que Dicen <span>Otros Entrenadores</span></h2>
-        <p>Lee comentarios verificados de entrenadores de ligas juveniles, escuelas y clubes.</p>
+    <div class="bonus-grid">
+      <!-- Bonus 1 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus1.jpg" alt="Bonus 1 - Individual Technique Drills" class="bonus-thumb-img" loading="lazy" decoding="async">
+        </div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 1</span>
+          <h3>BONO: Ejercicios de Técnica Individual</h3>
+          <p>Rutinas enfocadas en entrenamientos de jugadores, mecánica de tiro y ejercicios avanzados de manejo de balón.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$9.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
+        </div>
       </div>
       
-      <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Solía pasar al menos una hora planificando cada entrenamiento. Ahora solo le digo a CoachBrain lo que necesito, y en minutos tengo una sesión completa lista. Se ha convertido en parte de mi rutina diaria."</p>
-          <div class="testimonial-author">Michael R.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto de Escuela Secundaria</div>
+      <!-- Bonus 2 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus2.jpg" alt="Bonus 2 - Complete Tactical Training Guide" class="bonus-thumb-img" loading="lazy" decoding="async">
         </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Entrenar a niños con diferentes niveles de habilidad no es fácil. CoachBrain me da ejercicios que realmente se adaptan a mi equipo y me ahorra mucho tiempo cada semana."</p>
-          <div class="testimonial-author">Jason T.</div>
-          <div class="testimonial-role">Entrenador de Baloncesto Juvenil</div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 2</span>
+          <h3>BONO: Guía Completa de Entrenamiento Táctico</h3>
+          <p>Un libro de jugadas con jugadas ofensivas esenciales, jugadas a balón parado y estructuras de media cancha.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$12.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
         </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Lo que más me gusta es que puedo hacer preguntas en cualquier momento. Ya sea que necesite un ejercicio de tiro, un ejercicio defensivo o un calentamiento, CoachBrain siempre me da ideas útiles casi al instante."</p>
-          <div class="testimonial-author">Daniel M.</div>
-          <div class="testimonial-role">Entrenador de la AAU</div>
+      </div>
+
+      <!-- Bonus 3 -->
+      <div class="bonus-box">
+        <div class="bonus-img-wrapper">
+          <img src="images/bonus3.jpg" alt="Bonus 3 - Conditioning & Agility Circuits" class="bonus-thumb-img" loading="lazy" decoding="async">
+        </div>
+        <div class="bonus-content-wrapper">
+          <span class="bonus-meta-tag">🎁 BONO 3</span>
+          <h3>BONO: Circuitos de Acondicionamiento y Agilidad</h3>
+          <p>Circuitos estructurados de desarrollo físico y velocidad en estaciones para desarrollar atletismo y rapidez.</p>
+          <div class="bonus-value-bar">
+            <span class="bonus-value-label">Valor:</span>
+            <span class="bonus-value-original">$15.90</span>
+            <span class="bonus-value-free">GRATIS</span>
+          </div>
         </div>
       </div>
     </div>
