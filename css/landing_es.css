@@ -1388,3 +1388,135 @@ body {
   border-top-color: var(--primary) !important;
   box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.08);
 }
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION OVERRIDES (< 768px & < 380px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Global Layout Padding */
+  .section-wrapper {
+    padding: 2.75rem 1rem !important;
+  }
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+  .section-header h2 {
+    font-size: clamp(1.5rem, 5vw, 1.95rem) !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .section-header p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 0.8rem 0.85rem 1.25rem !important;
+  }
+  .hero-section h1 {
+    font-size: clamp(1.45rem, 5.5vw, 1.95rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+  }
+  .hero-subheadline {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+    margin: 0.35rem auto 0.75rem !important;
+  }
+  .hero-video-container {
+    max-width: 290px !important;
+    width: 88% !important;
+    margin: 12px auto 16px !important;
+    border-radius: 14px !important;
+  }
+  .btn-hero-cta {
+    max-width: 100% !important;
+    font-size: 0.88rem !important;
+    padding: 0.9rem 1rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* Features & Steps & Bonus Grids */
+  .features-grid, .bonus-grid, .testimonials-grid, .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .feature-item, .bonus-box {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 12px !important;
+  }
+
+  /* WhatsApp Carousel Mobile */
+  .testimonial-carousel-wrapper {
+    max-width: 320px !important;
+    width: 95% !important;
+  }
+  #carousel-prev {
+    left: -12px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+  #carousel-next {
+    right: -12px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Pricing Cards Mobile */
+  .pricing-wrapper {
+    padding: 2.5rem 1rem !important;
+  }
+  .pricing-card {
+    padding: 1.75rem 1.15rem 1.5rem 1.15rem !important;
+  }
+  .price-box h4 {
+    font-size: 2.35rem !important;
+  }
+  .btn-primary {
+    font-size: 0.95rem !important;
+    padding: 0.85rem 1.25rem !important;
+    width: 100% !important;
+  }
+
+  /* Creator Card Mobile */
+  .creator-card {
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem 1.15rem !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+  }
+  .creator-card > div:first-child {
+    max-width: 240px !important;
+    margin: 0 auto !important;
+  }
+  .creator-card > div:last-child {
+    text-align: left !important;
+  }
+
+  /* FAQ Accordion Mobile */
+  .faq-item {
+    padding: 1.15rem 1rem !important;
+  }
+  .faq-question {
+    font-size: 0.95rem !important;
+  }
+  .faq-answer p {
+    font-size: 0.88rem !important;
+  }
+}
+
+/* Extra Small Screens (< 380px) */
+@media (max-width: 380px) {
+  .hero-section h1 {
+    font-size: 1.35rem !important;
+  }
+  .btn-hero-cta {
+    font-size: 0.82rem !important;
+    padding: 0.85rem 0.75rem !important;
+  }
+  .testimonial-carousel-wrapper {
+    max-width: 280px !important;
+  }
+}
