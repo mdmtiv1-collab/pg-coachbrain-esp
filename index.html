@@ -286,18 +286,22 @@
 
         <!-- Slides Viewport -->
         <div id="carousel-viewport" style="overflow: hidden; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(15,23,42,0.08); background: #ffffff; touch-action: pan-y;">
-          <div id="carousel-track" style="display: flex; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); width: 300%;">
+          <div id="carousel-track" style="display: flex; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); width: 400%;">
             <!-- Slide 1: Javier Moreno -->
-            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+            <div class="carousel-slide" style="width: 25%; flex-shrink: 0; padding: 6px;">
               <img src="images/depoimento1.png" alt="Testimonio Javier Moreno" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
             </div>
             <!-- Slide 2: Sergio López -->
-            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+            <div class="carousel-slide" style="width: 25%; flex-shrink: 0; padding: 6px;">
               <img src="images/depoimento2.png" alt="Testimonio Sergio López" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
             </div>
             <!-- Slide 3: Álvaro García -->
-            <div class="carousel-slide" style="width: 33.333%; flex-shrink: 0; padding: 6px;">
+            <div class="carousel-slide" style="width: 25%; flex-shrink: 0; padding: 6px;">
               <img src="images/depoimento3.png" alt="Testimonio Álvaro García" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
+            </div>
+            <!-- Slide 4: Lucía Fernández -->
+            <div class="carousel-slide" style="width: 25%; flex-shrink: 0; padding: 6px;">
+              <img src="images/depoimento4.png" alt="Testimonio Lucía Fernández" style="width: 100%; height: auto; display: block; border-radius: 14px;" loading="lazy">
             </div>
           </div>
         </div>
@@ -307,6 +311,7 @@
           <span class="carousel-dot active" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: #16a34a; cursor: pointer; transition: all 0.3s ease;"></span>
           <span class="carousel-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: all 0.3s ease;"></span>
           <span class="carousel-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: all 0.3s ease;"></span>
+          <span class="carousel-dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: all 0.3s ease;"></span>
         </div>
       </div>
     </div>
@@ -322,11 +327,11 @@
         if (!track || !viewport) return;
 
         var currentIndex = 0;
-        var totalSlides = 3;
+        var totalSlides = 4;
 
         function updateCarousel(index) {
           currentIndex = (index + totalSlides) % totalSlides;
-          track.style.transform = 'translateX(-' + (currentIndex * 33.3333) + '%)';
+          track.style.transform = 'translateX(-' + (currentIndex * 25) + '%)';
           dots.forEach(function(dot, i) {
             if (i === currentIndex) {
               dot.style.background = '#16a34a';
