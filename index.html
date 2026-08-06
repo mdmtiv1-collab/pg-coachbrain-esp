@@ -69,9 +69,9 @@
 </head>
 <body>
 
-  <!-- BARRA DE BENEFICIOS (TOP BANNER) -->
+  <!-- Top Promo Banner -->
   <div class="promo-banner-top">
-    <span>✅ Prácticas personalizadas &bull; ✅ Adaptadas a tu equipo &bull; ✅ Listas en minutos &bull; ✅ Disponible 24/7</span>
+    <span>🏀 OFERTA VÁLIDA SOLO HOY • <strong id="promo-date"></strong></span>
   </div>
 
   <!-- HERO SECTION -->
@@ -700,6 +700,14 @@
         }
       });
     });
+
+    // Set dynamic date in promo banner (e.g., "6 DE AGOSTO")
+    const dateElement = document.getElementById('promo-date');
+    if (dateElement) {
+      const options = { day: 'numeric', month: 'long' };
+      const today = new Date().toLocaleDateString('es-ES', options).toUpperCase();
+      dateElement.textContent = today;
+    }
 
     // Social Proof Purchase Notifications
     const names = ['Carlos Gómez', 'Javier Rodríguez', 'Alejandro Fernández', 'Miguel Silva', 'Sofía Pérez', 'Roberto Martínez', 'Diego González', 'Elena Sánchez', 'Fernando Romero', 'Andrés Torres', 'Juan Díaz', 'Laura Ruiz', 'Mateo Morales', 'Gabriel Castro', 'Daniel Ortega', 'Tomás Navarro', 'Marcos Delgado', 'Camila Vargas', 'Luis Medina', 'Sebastián Herrera'];
