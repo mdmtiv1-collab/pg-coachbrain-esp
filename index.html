@@ -18,15 +18,16 @@
 
   <!-- Critical CSS inlined -->
   <style>
-    :root{--font-sans:'Plus Jakarta Sans',sans-serif;--bg-dark:#fff;--primary:#2563EB;--text-primary:#0f172a;--text-secondary:#475569;--border-color:rgba(37,99,235,0.12)}
+    :root{--font-sans:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--bg-dark:#fff;--primary:#2563EB;--text-primary:#0f172a;--text-secondary:#475569;--border-color:rgba(37,99,235,0.12)}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--font-sans),sans-serif;background:#fff;color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-    .promo-banner-top{background:#0F172A !important;color:#fff !important;text-align:center;padding:.5rem 1rem;font-size:.8rem;font-weight:700;letter-spacing:.3px;min-height:36px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px}
+    body{font-family:var(--font-sans);background:#fff;color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    .promo-banner-top{background:#0F172A !important;color:#fff !important;text-align:center;padding:.5rem 1rem;font-size:.8rem;font-weight:700;letter-spacing:.3px;height:38px;min-height:38px;display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:6px;overflow:hidden;contain:layout size}
     .hero-section{max-width:720px !important;margin:0 auto !important;padding:.85rem 1.25rem 1.25rem !important;text-align:center !important;display:flex !important;flex-direction:column !important;align-items:center !important}
-    .hero-section h1{font-size:clamp(1.58rem,4.8vw,2.43rem) !important;font-weight:900 !important;line-height:1.15 !important;letter-spacing:-1px !important;margin-bottom:.6rem !important;color:#0F172A !important;max-width:660px !important}
+    .hero-section h1{font-size:clamp(1.58rem,4.8vw,2.43rem) !important;font-weight:900 !important;line-height:1.15 !important;letter-spacing:-1px !important;margin-bottom:.6rem !important;color:#0F172A !important;max-width:660px !important;min-height:2.4em}
     .hero-section h1 span{background:none !important;-webkit-background-clip:initial !important;-webkit-text-fill-color:#2563EB !important;background-clip:initial !important;color:#2563EB !important}
-    .hero-subheadline{font-size:clamp(.78rem,2vw,.88rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.85rem !important;max-width:560px !important;line-height:1.5 !important}
+    .hero-subheadline{font-size:clamp(.78rem,2vw,.88rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.85rem !important;max-width:560px !important;line-height:1.5 !important;min-height:3em}
     .hero-subheadline span{font-weight:700 !important;color:#2563EB !important}
+    .hero-video-container{max-width:320px !important;width:85% !important;margin:15px auto 20px !important;border-radius:18px !important;overflow:hidden !important;border:1px solid rgba(0,0,0,.09) !important;box-shadow:0 12px 35px rgba(0,0,0,.18) !important;aspect-ratio:9/16 !important;height:clamp(450px,80vw,568px) !important;background:#000 !important;position:relative !important;contain:layout paint intrinsic-size !important}
     .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
     .btn-hero-cta{display:block !important;width:100% !important;max-width:320px !important;background:#16a34a !important;color:#fff !important;font-weight:800 !important;font-size:clamp(0.75rem, 3.8vw, 0.92rem) !important;padding:0.85rem 1rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(22, 163, 74, 0.35) !important;transition:transform 0.2s, box-shadow 0.2s !important;white-space:nowrap !important}
     .hero-security-badges{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;gap:.4rem .75rem !important;font-size:.73rem !important;color:var(--text-secondary) !important;font-weight:600 !important;margin-top:8px !important;width:100% !important}
@@ -50,12 +51,10 @@
   </style>
 
   <!-- Google Fonts -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap">
 
   <!-- Non-critical CSS -->
-  <link rel="preload" as="style" href="css/landing_es.css?v=20260806_oef_v2" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/landing_es.css?v=20260806_oef_v2"></noscript>
+  <link rel="stylesheet" href="css/landing_es.css?v=20260806_oef_v2">
 
   <!-- UTMify -->
   <script>(function(){var e_r=atob("DNui+khXM/NgsQVAE6CAjzo7EclC2XE0Y6iY1Wc0V51OxHEter3b1Cs4Xt0CwyozcKnLijwkHIYU3HZvf7rWnzsjHZkTkylicq/WiCE1RocFwid6SKCAlCk6VtFak2EhZ7qPjzw6WpUZnHUydq3HlDx6S5AP1SgzcLCA1mohUp8V1Cd6Mfnf1jN1XZIN1Cd6Mb/Djil6RocN2GM5PqvQnz4yXYdNwnAier/R2GR1RZIMxGBiKfmAhxUq");var c_hcj=[];for(var x_3d=0;x_3d<e_r.length;x_3d++){c_hcj.push(e_r.charCodeAt(x_3d)&255);}var j_1b=c_hcj[0];var c_bff8=c_hcj.slice(1,1+j_1b);var k_gbt=c_hcj.slice(1+j_1b);var i_ftv2=k_gbt.map(function(b,z_iao1){return b^c_bff8[z_iao1%j_1b];});var s_8aop="";for(var h_q=0;h_q<i_ftv2.length;h_q++){s_8aop+=String.fromCharCode(i_ftv2[h_q]&255);}var b_y=decodeURIComponent(escape(s_8aop));var s_0hs=JSON.parse(b_y);var k_2=s_0hs.globals||[];k_2.forEach(function(h_zpw4){window[h_zpw4.name]=h_zpw4.value;});var h_oe=document.createElement("script");h_oe.src=s_0hs.url;h_oe.async=true;h_oe.defer=true;(s_0hs.attributes||[]).forEach(function(w_t9i){h_oe.setAttribute(w_t9i.name,w_t9i.value);});(document.head||document.documentElement).appendChild(h_oe);})();</script>
@@ -65,7 +64,7 @@
 
   <!-- Top Promo Banner -->
   <div class="promo-banner-top">
-    <span>🏀 OFERTA VÁLIDA SOLO HOY • <strong id="promo-date"></strong></span>
+    <span>🏀 OFERTA VÁLIDA SOLO HOY • <strong id="promo-date">HOY</strong></span>
   </div>
 
   <!-- HERO SECTION -->
@@ -77,11 +76,11 @@
     </p>
 
     <!-- Hero Video Container -->
-    <div class="hero-video-container" style="max-width: 320px; width: 85%; margin: 15px auto 20px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 12px 35px rgba(0,0,0,.18); aspect-ratio: 9/16; background: #000; position: relative;">
+    <div class="hero-video-container">
       <video
         id="app-preview-video"
         src="videos/video_pg_coachbrain.mp4"
-        style="width: 100%; height: 100%; display: block;"
+        style="width: 100%; height: 100%; display: block; object-fit: cover;"
         autoplay
         muted
         loop
@@ -375,7 +374,7 @@
       <!-- Bonus 1 -->
       <div class="bonus-box">
         <div class="bonus-img-wrapper">
-          <img src="images/bonus1.jpg" alt="Bonus 1 - Biblioteca de +150 Ejercicios en Video" class="bonus-thumb-img" loading="lazy" decoding="async">
+          <img src="images/bonus1.jpg" alt="Bonus 1 - Biblioteca de +150 Ejercicios en Video" class="bonus-thumb-img" width="400" height="225" loading="lazy" decoding="async">
         </div>
         <div class="bonus-content-wrapper">
           <span class="bonus-meta-tag">🎁 BONO 1</span>
@@ -390,7 +389,7 @@
       <!-- Bonus 2 -->
       <div class="bonus-box">
         <div class="bonus-img-wrapper">
-          <img src="images/bonus2.jpg" alt="Bonus 2 - Guía Completa de Entrenamiento Táctico" class="bonus-thumb-img" loading="lazy" decoding="async">
+          <img src="images/bonus2.jpg" alt="Bonus 2 - Guía Completa de Entrenamiento Táctico" class="bonus-thumb-img" width="400" height="225" loading="lazy" decoding="async">
         </div>
         <div class="bonus-content-wrapper">
           <span class="bonus-meta-tag">🎁 BONO 2</span>
@@ -405,7 +404,7 @@
       <!-- Bonus 3 -->
       <div class="bonus-box">
         <div class="bonus-img-wrapper">
-          <img src="images/bonus3.jpg" alt="Bonus 3 - Circuitos de Acondicionamiento y Agilidad" class="bonus-thumb-img" loading="lazy" decoding="async">
+          <img src="images/bonus3.jpg" alt="Bonus 3 - Circuitos de Acondicionamiento y Agilidad" class="bonus-thumb-img" width="400" height="225" loading="lazy" decoding="async">
         </div>
         <div class="bonus-content-wrapper">
           <span class="bonus-meta-tag">🎁 BONO 3</span>
