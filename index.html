@@ -29,7 +29,7 @@
     html { line-height: 1.55; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
     body { background-color: #fff; color: #0f172a; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     
-    h1, h2, h3, h4, .font-display, .font-sans { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; letter-spacing: -0.03em; }
+    h1, h2, h3, h4, button, input, a, span, p, div, .font-display, .font-sans { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; letter-spacing: -0.03em; }
 
     .bg-sport-orange { background-color: #ea580c !important; }
     .text-sport-orange { color: #ea580c !important; }
@@ -79,6 +79,18 @@
     .rounded-2xl { border-radius: 1.25rem; } .rounded-3xl { border-radius: 1.75rem; } .rounded-full { border-radius: 9999px; } .rounded-xl { border-radius: 0.85rem; } .rounded-md { border-radius: 0.5rem; }
     .shadow-lg { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); } .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.22); }
     .border-2 { border-width: 2px; } .border-4 { border-width: 4px; } .border-t { border-top-width: 1px; }
+
+    /* Fix Aspect Ratio for Testimonial Cards & Images */
+    .testimonial-card-item {
+      width: 270px;
+      aspect-ratio: 720 / 1260;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .testimonial-card-item {
+        width: 320px;
+      }
+    }
 
     /* Modal Styling */
     .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; transition: opacity 0.3s ease; }
@@ -139,7 +151,7 @@
           class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-5 py-4 sm:px-10 sm:py-5 text-sm sm:text-xl text-center leading-tight animate-pulse-slow w-full sm:w-auto bg-sport-orange border-2 border-black shadow-lg"
           style="text-decoration: none;"
         >
-          🏀 ¡QUIERO OS MEUS TREINOS AGORA!
+          🏀 QUERO OS MEUS TREINOS AGORA!
         </a>
 
         <!-- Benefícios Rápidos (Cards Compactos FutForce com Plus Jakarta Sans) -->
@@ -170,13 +182,13 @@
   <section class="bg-white py-10 sm:py-16 overflow-hidden border-t border-sport-border">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 mb-6 sm:mb-8 text-center">
       <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
-        VISTA PREVIA REAL
+        DEMONSTRAÇÃO REAL
       </span>
       <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-black text-black">
-        Assim Son las Fichas que Tendrás en Tus Manos
+        Assim São as Fichas que Terás nas Tuas Mãos
       </h2>
       <p class="mt-2 text-xs sm:text-base text-sport-gray font-medium px-2">
-        Estructuradas paso a paso con series, repeticiones, descansos y consejos técnicos de ejecución.
+        Estruturadas passo a passo com séries, repetições, descansos e conselhos técnicos de execução.
       </p>
     </div>
 
@@ -185,51 +197,51 @@
       <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
 
       <div class="animate-scroll gap-3 sm:gap-4 py-2">
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-01.webp" alt="01. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-01.webp" alt="01. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-02.webp" alt="02. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-02.webp" alt="02. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-03.webp" alt="03. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-03.webp" alt="03. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-04.webp" alt="04. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-04.webp" alt="04. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-05.webp" alt="05. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-05.webp" alt="05. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
         <!-- Duplicado FutForce -->
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-01.webp" alt="01. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-01.webp" alt="01. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-02.webp" alt="02. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-02.webp" alt="02. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-03.webp" alt="03. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-03.webp" alt="03. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-04.webp" alt="04. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-04.webp" alt="04. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
-        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white">
-          <img src="ficha-05.webp" alt="05. Ficha FutForce" class="w-full h-auto block" loading="lazy" decoding="async" width="585" height="1024" />
+        <div class="w-[190px] sm:w-[280px] shrink-0 rounded-2xl overflow-hidden border-2 border-sport-border shadow-md bg-white" style="aspect-ratio: 585/1024;">
+          <img src="ficha-05.webp" alt="05. Ficha CoachBrain" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="585" height="1024" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN: TESTIMONIOS (CARROUSEL FUTFORCE COM IMAGENS DEPOIMENTO WEBP) -->
+  <!-- SECCIÓN: TESTIMONIOS (CARROUSEL FUTFORCE COM IMAGENS DEPOIMENTO WEBP PERFEITAMENTE PROPORCIONAIS) -->
   <section class="bg-white py-12 sm:py-20 border-t border-sport-border overflow-hidden">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 text-black">
       
       <div class="text-center mb-8 sm:mb-12">
         <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
-          RESULTADOS REALES
+          RESULTADOS REAIS
         </span>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-black text-black">
-          Resultados de Quienes Ya Están Entrenando
+          Resultados de Quem Já Está a Treinar
         </h2>
         <p class="mt-2 text-xs sm:text-base text-sport-gray max-w-2xl mx-auto px-2">
           Treinadores e atletas que já aplicam as rotinas semanais na sua preparação.
@@ -240,7 +252,7 @@
       <div class="relative max-w-4xl mx-auto">
         <button 
           id="prevTestimonial" 
-          aria-label="Testimonio anterior"
+          aria-label="Depoimento anterior"
           class="hidden sm:flex absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-sport-orange border-2 border-sport-orange items-center justify-center font-black text-lg shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
         >
           &#10094;
@@ -251,23 +263,23 @@
           class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-2 items-center"
           style="scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;"
         >
-          <div class="w-[270px] sm:w-[320px] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
-            <img src="depoimento-alvaro.webp" alt="Testimonio Álvaro García" class="w-full h-auto block" loading="lazy" decoding="async" width="720" height="1260" />
+          <div class="testimonial-card-item snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-alvaro.webp" alt="Depoimento Álvaro" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
           </div>
-          <div class="w-[270px] sm:w-[320px] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
-            <img src="depoimento-lucia.webp" alt="Testimonio Lucía Fernández" class="w-full h-auto block" loading="lazy" decoding="async" width="720" height="1260" />
+          <div class="testimonial-card-item snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-lucia.webp" alt="Depoimento Lucía" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
           </div>
-          <div class="w-[270px] sm:w-[320px] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
-            <img src="depoimento-sergio.webp" alt="Testimonio Sergio López" class="w-full h-auto block" loading="lazy" decoding="async" width="720" height="1260" />
+          <div class="testimonial-card-item snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-sergio.webp" alt="Depoimento Sergio" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
           </div>
-          <div class="w-[270px] sm:w-[320px] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
-            <img src="depoimento-javier.webp" alt="Testimonio Javier Moreno" class="w-full h-auto block" loading="lazy" decoding="async" width="720" height="1260" />
+          <div class="testimonial-card-item snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-javier.webp" alt="Depoimento Javier" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
           </div>
         </div>
 
         <button 
           id="nextTestimonial" 
-          aria-label="Siguiente testimonio"
+          aria-label="Seguinte depoimento"
           class="hidden sm:flex absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-sport-orange border-2 border-sport-orange items-center justify-center font-black text-lg shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
         >
           &#10095;
@@ -283,7 +295,7 @@
           <button class="w-2.5 h-2.5 rounded-full bg-sport-border transition-all dot-indicator" data-index="2"></button>
           <button class="w-2.5 h-2.5 rounded-full bg-sport-border transition-all dot-indicator" data-index="3"></button>
         </div>
-        <button id="nextMobileBtn" class="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black text-sport-orange border border-sport-orange font-bold text-sm shadow-md active:scale-95" aria-label="Siguiente">&#10095;</button>
+        <button id="nextMobileBtn" class="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black text-sport-orange border border-sport-orange font-bold text-sm shadow-md active:scale-95" aria-label="Seguinte">&#10095;</button>
       </div>
 
       <div class="mt-8 flex justify-center px-2">
@@ -292,21 +304,21 @@
           class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 px-6 py-4 text-sm sm:text-base bg-sport-orange border-2 border-black w-full sm:w-auto shadow-md"
           style="text-decoration: none;"
         >
-          🏀 ¡QUIERO COMEÇAR HOJE MESMO!
+          🏀 QUERO COMEÇAR HOJE MESMO!
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- SECCIÓN: AUTORIDAD / PERFIL (COM PERFIL.WEBP FUTFORCE) -->
+  <!-- SECCIÓN: AUTORIDAD / PERFIL (COM PERFIL.WEBP FUTFORCE PERFEITAMENTE CIRCULAR 1:1) -->
   <section class="bg-white py-12 sm:py-20 border-t border-sport-border">
     <div class="mx-auto max-w-5xl px-4 sm:px-6">
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-14">
         
-        <div class="w-full max-w-[190px] sm:max-w-[280px] shrink-0">
-          <div class="relative rounded-full overflow-hidden shadow-2xl border-4 border-black bg-black aspect-square">
-            <img src="perfil.webp" alt="Preparador Físico FutForce / CoachBrain" class="w-full h-full object-cover aspect-square" loading="lazy" decoding="async" width="280" height="280" />
+        <div class="w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] mx-auto shrink-0">
+          <div class="w-full h-full relative rounded-full overflow-hidden shadow-2xl border-4 border-black bg-black">
+            <img src="perfil.webp" alt="Preparador Físico CoachBrain" class="w-full h-full object-cover object-center rounded-full block" loading="lazy" decoding="async" width="280" height="280" />
           </div>
         </div>
 
@@ -354,7 +366,7 @@
         <!-- Bono 1 (FutForce Image: bono1-movilidad.webp) -->
         <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
           <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
-            <img src="bono1-movilidad.webp" alt="Bono 1: Movilidad para Atletas" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+            <img src="bono1-movilidad.webp" alt="Bónus 1: Mobilidade para Atletas" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
           </div>
           <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #1</span>
           <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Mobilidade para Atletas</h3>
@@ -364,7 +376,7 @@
         <!-- Bono 2 (FutForce Image: bono2-alimentacion.webp) -->
         <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
           <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
-            <img src="bono2-alimentacion.webp" alt="Bono 2: Guía de Alimentación" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+            <img src="bono2-alimentacion.webp" alt="Bónus 2: Guia de Alimentação" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
           </div>
           <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #2</span>
           <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Guia de Alimentação</h3>
@@ -374,7 +386,7 @@
         <!-- Bono 3 (FutForce Image: bono3-antilesiones.webp) -->
         <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
           <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
-            <img src="bono3-antilesiones.webp" alt="Bono 3: Protocolo Anti-Lesiones" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+            <img src="bono3-antilesiones.webp" alt="Bónus 3: Protocolo Anti-Lesões" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
           </div>
           <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #3</span>
           <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Protocolo Anti-Lesões</h3>
@@ -384,7 +396,7 @@
         <!-- Bono 4 (FutForce Image: bono4-suplementacion.webp) -->
         <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
           <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
-            <img src="bono4-suplementacion.webp" alt="Bono 4: Guía de Suplementación" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+            <img src="bono4-suplementacion.webp" alt="Bónus 4: Guia de Suplementação" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
           </div>
           <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #4</span>
           <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Guia de Suplementação</h3>
@@ -399,7 +411,7 @@
           class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 px-6 py-4 text-sm sm:text-base bg-sport-orange border-2 border-black w-full sm:w-auto shadow-md"
           style="text-decoration: none;"
         >
-          🎁 ¡QUIERO TODOS OS MEUS BÓNUS HOJE!
+          🎁 QUERO TODOS OS MEUS BÓNUS HOJE!
         </a>
       </div>
     </div>
@@ -499,7 +511,7 @@
             <!-- Lista de entregáveis BÁSICO (FutForce Checklist) -->
             <div class="mt-6 border-t border-white/15 pt-5 text-left">
               <p class="font-display text-[11px] font-black uppercase tracking-wider text-gray-300 mb-3 text-center">
-                LO QUE INCLUYE ESTE PLAN:
+                O QUE ESTÁ INCLUÍDO NESTE PLANO:
               </p>
               <ul class="space-y-2.5 text-xs text-white">
                 <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
@@ -536,10 +548,10 @@
               id="btn-buy-basic"
               class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-black transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-6 py-4 text-xs sm:text-sm w-full bg-white border-2 border-white shadow-md hover:bg-sport-orange hover:border-sport-orange hover:text-white cursor-pointer"
             >
-              🏀 ¡QUIERO EL PLAN BÁSICO (7,90 €)!
+              🏀 QUERO O PLANO BÁSICO (7,90 €)!
             </button>
             <p class="mt-2.5 text-[10px] text-gray-400 font-medium">
-              🔒 Pago seguro con garantía de 7 días
+              🔒 Pagamento seguro com garantia de 7 dias
             </p>
           </div>
         </div>
@@ -547,9 +559,9 @@
         <!-- CARD 2: PACK COMPLETO VIP (14,90 €) (MAIS ESCOLHIDO FUTFORCE) -->
         <div class="relative rounded-3xl border-4 border-sport-orange bg-black text-white p-5 sm:p-8 flex flex-col justify-between shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] text-center ring-4 ring-sport-orange/60 mt-4 lg:mt-0">
           
-          <!-- Badge Superior "MÁS ELEGIDO" -->
+          <!-- Badge Superior "MAIS ESCOLHIDO" -->
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-sport-orange border-2 border-black px-4 py-1 text-[11px] sm:text-xs font-black uppercase tracking-widest text-white shadow-lg whitespace-nowrap">
-            ⭐ MÁS ELEGIDO (TODO INCLUIDO)
+            ⭐ MAIS ESCOLHIDO (TUDO INCLUÍDO)
           </div>
 
           <div>
@@ -581,7 +593,7 @@
             <!-- Lista de entregáveis COMPLETO FutForce -->
             <div class="mt-6 border-t border-white/15 pt-5 text-left">
               <p class="font-display text-[11px] font-black uppercase tracking-wider text-sport-orange mb-3 text-center">
-                TODO LO QUE TE LLEVAS HOY:
+                TUDO O QUE LEVAS HOJE:
               </p>
               <ul class="space-y-2.5 text-xs text-white">
                 <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
@@ -623,10 +635,10 @@
               class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-widest text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-6 py-4 text-xs sm:text-base animate-pulse-slow w-full bg-sport-orange border-2 border-black shadow-xl"
               style="text-decoration: none;"
             >
-              ⚽ ¡QUIERO EL PACK POR 14,90 €!
+              🏀 QUERO O PACK POR 14,90 €!
             </a>
             <p class="mt-2.5 text-[10px] text-gray-400 font-medium">
-              🔒 Pago seguro y encriptado con garantía de 7 días
+              🔒 Pagamento seguro e encriptado com garantia de 7 dias
             </p>
           </div>
         </div>
@@ -641,16 +653,16 @@
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
       <div class="rounded-2xl sm:rounded-3xl border-2 border-black bg-black p-6 sm:p-10 text-center flex flex-col items-center shadow-2xl">
         
-        <div class="mb-4 w-full max-w-[160px] sm:max-w-[210px] mx-auto aspect-square" style="aspect-ratio: 1/1; contain: layout paint;">
-          <img src="garantia.webp" alt="Garantía Incondicional de 7 Días" class="w-full h-auto drop-shadow-lg mx-auto" loading="lazy" decoding="async" width="210" height="210" />
+        <div class="mb-4 w-full max-w-[160px] sm:max-w-[210px] mx-auto" style="aspect-ratio: 1/1;">
+          <img src="garantia.webp" alt="Garantia Incondicional de 7 Dias" class="w-full h-full object-contain drop-shadow-lg mx-auto block" loading="lazy" decoding="async" width="210" height="210" />
         </div>
 
         <h3 class="font-display text-xl sm:text-3xl font-black text-white">
-          Garantía Incondicional de 7 Días
+          Garantia Incondicional de 7 Dias
         </h3>
         
         <p class="mt-2 text-xs sm:text-base text-gray-300 max-w-xl leading-relaxed">
-          Prueba las rutinas durante 7 días completos. Si sientes que no te ayudan a mejorar el rendimiento de la tu equipa en la cancha, te devolvemos el <strong class="text-white">100% de tu dinero</strong> de inmediato y sin preguntas.
+          Experimenta os treinos durante 7 dias completos. Se sentires que não te ajudam a melhorar o rendimento da tua equipa no pavilhão, devolvemos o <strong class="text-white">100% do teu dinheiro</strong> de imediato e sem perguntas.
         </p>
 
       </div>
@@ -663,7 +675,7 @@
       
       <div class="text-center mb-8">
         <h2 class="font-display text-2xl sm:text-4xl font-black text-black">
-          Preguntas Frecuentes
+          Perguntas Frequentes
         </h2>
       </div>
 
@@ -671,41 +683,41 @@
         
         <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
           <button type="button" onclick="toggleFaq(1)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
-            <span>¿Cómo recibo el acceso a las rutinas y bonos?</span>
+            <span>Como recebo o acesso aos treinos e bónus?</span>
             <span id="faq-icon-1" class="text-black text-lg font-black shrink-0">＋</span>
           </button>
           <div id="faq-ans-1" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
-            El acceso es 100% inmediato. Tras confirmar tu pago seguro, recibirás un correo electrónico con tu enlace exclusivo para acceder a la plataforma y descargar todas las fichas en PDF y ver los vídeos.
+            O acesso é 100% imediato. Após confirmar o teu pagamento seguro, receberás um e-mail com o teu link exclusivo para aceder à plataforma, descarregar todas as fichas em PDF e ver os vídeos.
           </div>
         </div>
 
         <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
           <button type="button" onclick="toggleFaq(2)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
-            <span>¿Puedo imprimir las fichas para llevarlas al pabellón?</span>
+            <span>Posso imprimir as fichas para levar para o pavilhão?</span>
             <span id="faq-icon-2" class="text-black text-lg font-black shrink-0">＋</span>
           </button>
           <div id="faq-ans-2" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
-            ¡Sí, totalmente! Todo el material fue diseñado y formateado en PDF de alta resolución listo para imprimir en tamaño A4 estándar o para visualizarlo cómodamente en la pantalla de cualquier smartphone.
+            Sim, totalmente! Todo o material foi desenhado e formatado em PDF de alta resolução pronto para imprimir em tamanho A4 ou para visualizar confortavelmente no ecrã de qualquer smartphone.
           </div>
         </div>
 
         <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
           <button type="button" onclick="toggleFaq(3)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
-            <span>¿Las rutinas sirven para cualquier escalón de basquetebol?</span>
+            <span>Os treinos servem para qualquer escalão de basquetebol?</span>
             <span id="faq-icon-3" class="text-black text-lg font-black shrink-0">＋</span>
           </button>
           <div id="faq-ans-3" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
-            Sí. El paquete incluye rutinas y fichas adaptadas desde el Minibasquete (Sub-10, Sub-12) hasta escalones competitivos (Sub-16, Sub-18 y Séniores).
+            Sim. O pacote inclui treinos e fichas adaptadas desde o Minibasquete (Sub-10, Sub-12) até escalões competitivos (Sub-16, Sub-18 e Séniores).
           </div>
         </div>
 
         <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
           <button type="button" onclick="toggleFaq(4)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
-            <span>¿Hay alguna mensualidad o cobro recurrente?</span>
+            <span>Existe alguma mensalidade ou cobrança recorrente?</span>
             <span id="faq-icon-4" class="text-black text-lg font-black shrink-0">＋</span>
           </button>
           <div id="faq-ans-4" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
-            No, ninguno. Realizas un pago único una sola vez según el plan que elijas. No existen mensualidades, suscripciones ni cobros recurrentes, y obtienes acceso vitalicio para siempre.
+            Não, nenhuma. Realizas um pagamento único uma única vez segundo o plano que escolheres. Não existem mensalidades, subscrições nem cobranças recorrentes, e obténs acesso vitalício para sempre.
           </div>
         </div>
 
@@ -719,7 +731,7 @@
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
       
       <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-white px-1">
-        Domina a Cancha e o Teu Planeamento <br class="hidden sm:inline" />
+        Domina o Pavilhão e o Teu Planeamento <br class="hidden sm:inline" />
         <span class="text-sport-orange">Agora Mesmo.</span>
       </h2>
 
@@ -733,12 +745,12 @@
           class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-8 py-4 sm:px-10 sm:py-5 text-base sm:text-xl animate-pulse-slow w-full sm:w-auto bg-sport-orange shadow-xl"
           style="text-decoration: none;"
         >
-          🏀 ¡QUIERO O MEU ACESSO POR 14,90 €!
+          🏀 QUERO O MEU ACESSO POR 14,90 €!
         </a>
       </div>
 
       <p class="mt-4 text-[11px] sm:text-xs text-gray-400">
-        🔒 Compra 100% Segura • Acceso Instantáneo • Garantía de 7 Días
+        🔒 Compra 100% Segura • Acesso Instantâneo • Garantia de 7 Dias
       </p>
 
     </div>
